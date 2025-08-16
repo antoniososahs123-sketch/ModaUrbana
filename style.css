@@ -70,7 +70,32 @@ header {
     border: 5px solid #6a1b9a;
     transform: scale(1.05);
 }
-
+.container {
+    display: flex; /* Utiliza flexbox para alinear los elementos en fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+.slider {
+    flex: 1; /* Permite que el slider ocupe el espacio disponible */
+    margin-right: 20px; /* Espacio entre el slider y el aside */
+}
+.texto {
+    flex: 1; /* Permite que el aside ocupe el espacio disponible */
+    background-color: #f9f9f9; /* Color de fondo para el aside */
+    padding: 15px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+    .slider {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 20px; /* Añade margen inferior */
+    }
+}
 /* SECCIONES INFORMATIVAS */
 .info {
     display: grid;
